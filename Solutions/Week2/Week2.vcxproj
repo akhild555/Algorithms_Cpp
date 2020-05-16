@@ -138,6 +138,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="2_1.cpp" />
+    <ClCompile Include="2_2.cpp" />
+    <ClCompile Include="2_3.cpp" />
+    <ClCompile Include="2_4.cpp" />
+    <ClCompile Include="2_5.cpp" />
+    <ClCompile Include="2_6.cpp" />
+    <ClCompile Include="2_7.cpp" />
+    <ClCompile Include="2_8.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
