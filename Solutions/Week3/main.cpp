@@ -13,7 +13,7 @@ int main() {
 
 	// Switch which problem you want to run from week 3 assignment //
 
-	int problem = 3;
+	int problem = 4;
 	int n = 0;
 
 	switch (problem) {
@@ -56,6 +56,21 @@ int main() {
 
 		cout << compute_min_refills(d, m, stops) << "\n";
 	}
+
+	case 4: {
+
+		size_t n;
+		std::cin >> n;
+		vector<int> a(n), b(n);
+		for (size_t i = 0; i < n; i++) {
+			std::cin >> a[i];
+		}
+		for (size_t i = 0; i < n; i++) {
+			std::cin >> b[i];
+		}
+		std::cout << max_dot_product(a, b) << std::endl;
+	}
+
 	}
 
 }
