@@ -13,7 +13,7 @@ int main() {
 
 	// Switch which problem you want to run from week 3 assignment //
 
-	int problem = 4;
+	int problem = 5;
 	int n = 0;
 
 	switch (problem) {
@@ -69,6 +69,21 @@ int main() {
 			std::cin >> b[i];
 		}
 		std::cout << max_dot_product(a, b) << std::endl;
+	}
+
+	case 5: {
+
+		int n;
+		std::cin >> n;
+		vector<Segment> segments(n);
+		for (size_t i = 0; i < segments.size(); ++i) {
+			std::cin >> segments[i].start >> segments[i].end;
+		}
+		vector<int> points = optimal_points(segments);
+		std::cout << points.size() << "\n";
+		for (size_t i = 0; i < points.size(); ++i) {
+			std::cout << points[i] << " ";
+		}
 	}
 
 	}
