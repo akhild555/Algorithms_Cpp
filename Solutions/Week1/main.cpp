@@ -17,7 +17,7 @@ int main() {
         std::cin >> a;
         std::cin >> b;
         std::cout << sum_of_two_digits(a, b);
-        return 0;
+        break;
     }
     case 2: {
         int n;
@@ -28,8 +28,9 @@ int main() {
         }
 
         std::cout << MaxPairwiseProduct(numbers) << "\n";
-        return 0;
+        break;
     }
     }
+    return 0;
 
 }

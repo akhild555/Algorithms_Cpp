@@ -13,7 +13,7 @@ int main() {
 
 	// Switch which problem you want to run from week 3 assignment //
 
-	int problem = 5;
+	int problem = 6;
 	int n = 0;
 
 	switch (problem) {
@@ -38,7 +38,7 @@ int main() {
 
 		std::cout.precision(10);
 		std::cout << optimal_value << std::endl;
-
+		break;
 	}
 
 	case 3: {
@@ -55,6 +55,7 @@ int main() {
 			cin >> stops.at(i);
 
 		cout << compute_min_refills(d, m, stops) << "\n";
+		break;
 	}
 
 	case 4: {
@@ -69,6 +70,7 @@ int main() {
 			std::cin >> b[i];
 		}
 		std::cout << max_dot_product(a, b) << std::endl;
+		break;
 	}
 
 	case 5: {
@@ -84,6 +86,18 @@ int main() {
 		for (size_t i = 0; i < points.size(); ++i) {
 			std::cout << points[i] << " ";
 		}
+		break;
+	}
+
+	case 6: {
+		int n;
+		std::cin >> n;
+		vector<int> summands = optimal_summands(n);
+		std::cout << summands.size() << '\n';
+		for (size_t i = 0; i < summands.size(); ++i) {
+			std::cout << summands[i] << ' ';
+		}
+		break;
 	}
 
 	}

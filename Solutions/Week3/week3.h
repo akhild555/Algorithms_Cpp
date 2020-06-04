@@ -17,3 +17,5 @@ struct Segment {
 };
 
 vector<int> optimal_points(vector<Segment>& segments);
+
+vector<int> optimal_summands(int n);
