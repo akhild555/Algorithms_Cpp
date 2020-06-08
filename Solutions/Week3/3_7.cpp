@@ -13,9 +13,7 @@ string largest_number(vector<string> a) {
     {
         for (size_t j = i + 1; j < a.size(); ++j) 
         {
-            if (i == j) {
-                    
-            }
+            if (i == j) {}
             else
             {
                 int first = std::stoi(a[i] + a[j]);
