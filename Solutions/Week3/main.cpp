@@ -2,7 +2,8 @@
 #include <vector>
 #include "week3.h"
 #include <algorithm>
-
+#include <string>
+#include <sstream>
 
 using std::cin;
 using std::cout;
@@ -13,7 +14,7 @@ int main() {
 
 	// Switch which problem you want to run from week 3 assignment //
 
-	int problem = 6;
+	int problem = 7;
 	int n = 0;
 
 	switch (problem) {
@@ -97,6 +98,17 @@ int main() {
 		for (size_t i = 0; i < summands.size(); ++i) {
 			std::cout << summands[i] << ' ';
 		}
+		break;
+	}
+
+	case 7: {
+		int n;
+		std::cin >> n;
+		vector<string> a(n);
+		for (size_t i = 0; i < a.size(); i++) {
+			std::cin >> a[i];
+		}
+		std::cout << largest_number(a);
 		break;
 	}
 

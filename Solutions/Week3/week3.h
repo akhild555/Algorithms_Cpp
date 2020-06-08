@@ -1,6 +1,9 @@
 #pragma once
 #include <vector>
 
+
+using std::string;
+
 using std::vector;
 
 int money_change(int a);
@@ -19,3 +22,5 @@ struct Segment {
 vector<int> optimal_points(vector<Segment>& segments);
 
 vector<int> optimal_summands(int n);
+
+string largest_number(vector<string> a);
