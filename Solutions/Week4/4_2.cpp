@@ -59,29 +59,25 @@ std::vector<int> Merge(std::vector<int> B, std::vector<int> C)
 
 
 int get_majority_element(std::vector<int>& a, int left, int right) {
-	//if (left == right) return -1;
-	//if (left + 1 == right) return a[left];
-
 
 	// sort vector using mergesort
 	std::vector<int> sorted_a = MergeSort(a);
 
-	// find majority element if it exists
+	// find majority element. If it exists, it should be in the middle of sorted array.
+
+	int mid = left + (right - left) / 2;
+	int majority = sorted_a[mid];
+	int count = 0;
 	for (size_t i = 0; i < sorted_a.size(); ++i)
 	{
-		int currentElement = sorted_a[i];
-		int count = 0;
-		for (size_t j = 0; j < sorted_a.size(); ++j)
-		{
-			if (sorted_a[j] == currentElement)
-			{
-				count += 1;
-			}
+		if (sorted_a[i] == majority) {
+			count++;
 		}
-		if (count > sorted_a.size() / 2)
-		{
-			return 1;
-		}
+	}
+
+	if (count > sorted_a.size() / 2)
+	{
+		return 1;
 	}
 
 	return 0;
