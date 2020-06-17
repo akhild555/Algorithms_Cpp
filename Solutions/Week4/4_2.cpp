@@ -42,11 +42,11 @@ std::vector<int> Merge(std::vector<int> B, std::vector<int> C)
 			C.erase(C.begin());
 			D[count] = c;
 			count += 1;
-		}	
+		}
 	}
 
 	std::vector<int> remainder = B.size() > C.size() ? B : C; // find which vector still has remaining elements
-	
+
 	// add remaining elements to D
 	for (size_t i = 0; i < remainder.size(); ++i)
 	{
@@ -78,11 +78,11 @@ int get_majority_element(std::vector<int>& a, int left, int right) {
 				count += 1;
 			}
 		}
-		if (count > sorted_a.size() / 2) 
+		if (count > sorted_a.size() / 2)
 		{
 			return 1;
 		}
 	}
-	
+
 	return 0;
 }
