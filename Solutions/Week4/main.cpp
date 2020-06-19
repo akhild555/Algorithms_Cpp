@@ -10,7 +10,7 @@ int main() {
 
 	// Switch which problem you want to run from week 4 assignment //
 
-	int problem = 2;
+	int problem = 3;
 
 
 	switch (problem) {
@@ -43,6 +43,20 @@ int main() {
 			std::cin >> a[i];
 		}
 		std::cout << (get_majority_element(a, 0, a.size())) << '\n';
+	}
+
+	case 3:
+	{
+		int n;
+		std::cin >> n;
+		vector<int> a(n);
+		for (size_t i = 0; i < a.size(); ++i) {
+			std::cin >> a[i];
+		}
+		Quicksort(a, 0, a.size() - 1);
+		for (size_t i = 0; i < a.size(); ++i) {
+			std::cout << a[i] << ' ';
+		}
 	}
 
 	}
