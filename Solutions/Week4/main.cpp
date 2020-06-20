@@ -53,7 +53,7 @@ int main() {
 		for (size_t i = 0; i < a.size(); ++i) {
 			std::cin >> a[i];
 		}
-		Quicksort(a, 0, a.size() - 1);
+		randomized_quick_sort(a, 0, a.size() - 1);
 		for (size_t i = 0; i < a.size(); ++i) {
 			std::cout << a[i] << ' ';
 		}
