@@ -1,6 +1,6 @@
 #include <vector>
+#include "week4.h"
 
-std::vector<int> Merge(std::vector<int> B, std::vector<int> C);
 
 std::vector<int> MergeSort(std::vector<int> A)
 {

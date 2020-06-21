@@ -10,7 +10,7 @@ int main() {
 
 	// Switch which problem you want to run from week 4 assignment //
 
-	int problem = 3;
+	int problem = 4;
 
 
 	switch (problem) {
@@ -58,6 +58,20 @@ int main() {
 			std::cout << a[i] << ' ';
 		}
 	}
+	
+	case 4:
+	{
+		int n;
+		std::cin >> n;
+		vector<int> a(n);
+		for (size_t i = 0; i < a.size(); i++) {
+			std::cin >> a[i];
+		}
+		vector<int> b(a.size());
+		std::cout << get_number_of_inversions(a, b, 0, a.size()) << '\n';
+	}
+
+
 
 	}
 }
