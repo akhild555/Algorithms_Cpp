@@ -3,15 +3,12 @@
 std::vector<int> MergeSort2(std::vector<int> A, long long& ref);
 std::vector<int> Merge2(std::vector<int> B, std::vector<int> C, long long& ref);
 
-
-
 long long get_number_of_inversions(std::vector<int>& a, std::vector<int>& b, size_t left, size_t right) {
 	long long number_of_inversions = 0;
 	if (right <= left + 1) return number_of_inversions;
 	std::vector<int> sorted_a = MergeSort2(a, number_of_inversions);
 	return number_of_inversions;
 }
-
 
 std::vector<int> MergeSort2(std::vector<int> A, long long& ref)
 {
