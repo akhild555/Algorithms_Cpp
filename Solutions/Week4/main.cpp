@@ -10,7 +10,7 @@ int main() {
 
 	// Switch which problem you want to run from week 4 assignment //
 
-	int problem = 4;
+	int problem = 5;
 
 
 	switch (problem) {
@@ -71,6 +71,24 @@ int main() {
 		std::cout << get_number_of_inversions(a, b, 0, a.size()) << '\n';
 	}
 
+	case 5:
+	{
+		int n, m;
+		std::cin >> n >> m;
+		vector<int> starts(n), ends(n);
+		for (size_t i = 0; i < starts.size(); i++) {
+			std::cin >> starts[i] >> ends[i];
+		}
+		vector<int> points(m);
+		for (size_t i = 0; i < points.size(); i++) {
+			std::cin >> points[i];
+		}
+		//use fast_count_segments
+		vector<int> cnt = fast_count_segments(starts, ends, points);
+		for (size_t i = 0; i < cnt.size(); i++) {
+			std::cout << cnt[i] << ' ';
+		}
+	}
 
 
 	}

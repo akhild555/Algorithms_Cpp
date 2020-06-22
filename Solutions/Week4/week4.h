@@ -15,3 +15,6 @@ std::vector<int> Merge(std::vector<int> B, std::vector<int> C);
 
 long long get_number_of_inversions(std::vector<int>& a, std::vector<int>& b, size_t left, size_t right);
 
+std::vector<int> fast_count_segments(std::vector<int> starts, std::vector<int> ends, std::vector<int> points);
+
+std::vector<int> naive_count_segments(std::vector<int> starts, std::vector<int> ends, std::vector<int> points);
