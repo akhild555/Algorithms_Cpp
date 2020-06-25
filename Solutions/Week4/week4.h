@@ -18,3 +18,5 @@ long long get_number_of_inversions(std::vector<int>& a, std::vector<int>& b, siz
 std::vector<int> fast_count_segments(std::vector<int> starts, std::vector<int> ends, std::vector<int> points);
 
 std::vector<int> naive_count_segments(std::vector<int> starts, std::vector<int> ends, std::vector<int> points);
+
+double minimal_distance(std::vector<int> x, std::vector<int> y);

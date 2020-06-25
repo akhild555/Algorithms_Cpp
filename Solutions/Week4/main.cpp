@@ -1,16 +1,23 @@
 #include <iostream>
 #include "week4.h"
-
+#include <string>
+#include <cmath>
+#include <algorithm>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
 
 using std::vector;
-
+using std::string;
+using std::pair;
+using std::min;
 
 
 int main() {
 
 	// Switch which problem you want to run from week 4 assignment //
 
-	int problem = 5;
+	int problem = 6;
 
 
 	switch (problem) {
@@ -90,6 +97,18 @@ int main() {
 		}
 	}
 
+	case 6:
+	{
+		size_t n;
+		std::cin >> n;
+		vector<int> x(n);
+		vector<int> y(n);
+		for (size_t i = 0; i < n; i++) {
+			std::cin >> x[i] >> y[i];
+		}
+		std::cout << std::fixed;
+		std::cout << std::setprecision(9) << minimal_distance(x, y) << "\n";
+	}
 
 	}
 }
