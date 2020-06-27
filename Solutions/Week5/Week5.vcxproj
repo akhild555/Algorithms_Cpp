@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="5_1.cpp" />
+    <ClCompile Include="5_2.cpp" />
+    <ClCompile Include="5_3.cpp" />
+    <ClCompile Include="5_4.cpp" />
+    <ClCompile Include="5_5.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="week5.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{B6A4ECB6-B56B-4AAE-AE52-04F3CD2F9096}</ProjectGuid>
