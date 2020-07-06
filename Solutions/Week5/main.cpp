@@ -5,7 +5,7 @@ int main() {
 
 	// Switch which problem you want to run from week 5 assignment //
 
-	int problem = 3;
+	int problem = 4;
 
 
 	switch (problem) {
@@ -35,6 +35,25 @@ int main() {
 		std::cin >> str1 >> str2;
 		std::cout << edit_distance(str1, str2) << std::endl;
 		return 0;
+	}
+
+	case 4:
+	{
+		size_t n;
+		std::cin >> n;
+		std::vector<int> a(n);
+		for (size_t i = 0; i < n; i++) {
+			std::cin >> a[i];
+		}
+
+		size_t m;
+		std::cin >> m;
+		std::vector<int> b(m);
+		for (size_t i = 0; i < m; i++) {
+			std::cin >> b[i];
+		}
+
+		std::cout << lcs2(a, b) << std::endl;
 	}
 	}
 }
