@@ -4,12 +4,12 @@
 int partition3(std::vector<int>& A) {
 	
     const int row = A.size(); // # of items
-    const int column = std::accumulate(A.begin(), A.end(),0); // total # columns = sum of values
+    const int column = std::accumulate(A.begin(), A.end(),0) / 3; // total # columns = sum of values / number of people
     int D[150][150] = { 0 };
 
     // fill first column with 1's
 
-    for (int i = 0; i <= row; i++)
+    for (int i = 0; i < row; i++)
     {
         D[i][0] = 1;
     }
@@ -30,15 +30,24 @@ int partition3(std::vector<int>& A) {
     {
         for (int j = 1; j <= column; j++)
         {
+
+            if (A[i] > j)
+            {
+                D[i][j] = D[i - 1][j];
+            }
             if (j == A[i])
             {
                 D[i][j] = 1;
             }
-            else if (D[i - 1][j - A[i]] == 1)
+            if (D[i - 1][j] == 1)
             {
                 D[i][j] = 1;
-            }          
+            }
+            if (D[i - 1][j] == 0 && D[i - 1][j - A[i]] == 1)
+            {
+                D[i][j] = 1;
+            }
         }
     }
-	return D[row-1][column-1];
+	return D[row-1][column];
 }
