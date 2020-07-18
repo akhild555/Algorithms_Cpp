@@ -3,24 +3,42 @@
 
 int partition3(std::vector<int>& A) {
 	
-    const int row = A.size();
-    const int column = std::accumulate(A.begin(), A.end(),0);
-    int D[110][110] = { 0 };
+    const int row = A.size(); // # of items
+    const int column = std::accumulate(A.begin(), A.end(),0); // total # columns = sum of values
+    int D[150][150] = { 0 };
 
-    for (int i = 1; i <= row; i++)
+    // fill first column with 1's
+
+    for (int i = 0; i <= row; i++)
+    {
+        D[i][0] = 1;
+    }
+
+    // fill first row
+
+    for (int i = 1; i <= column; i++)
+    {
+        if (i == A[0])
+        {
+            D[0][i] = 1;
+        }
+    }
+
+    // fill remaining rows and columns
+
+    for (int i = 1; i < row; i++)
     {
         for (int j = 1; j <= column; j++)
         {
-            D[j][i] = D[j][i - 1];
-            if (A[i - 1] <= j) // i-1 since indexing from 1 in for loop
+            if (j == A[i])
             {
-                int val = D[j - A[i - 1]][i - 1] + A[i - 1];
-                if (D[j][i] < val)
-                {
-                    D[j][i] = val;
-                }
+                D[i][j] = 1;
             }
+            else if (D[i - 1][j - A[i]] == 1)
+            {
+                D[i][j] = 1;
+            }          
         }
     }
-	return D[column][row];
+	return D[row-1][column-1];
 }

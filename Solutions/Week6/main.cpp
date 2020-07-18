@@ -5,7 +5,7 @@ int main() {
 
 	// Switch which problem you want to run from week 5 assignment //
 
-	int problem = 3	;
+	int problem = 2	;
 
 	switch (problem) {
 
